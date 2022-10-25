@@ -10,16 +10,11 @@ import { toNodeListener } from "h3";
 // @ts-ignore
 import { useNitroApp } from "#internal/nitro";
 import { createSocketServer } from "#entry_socket";
-import { instrument } from "@socket.io/admin-ui";
 
 const nitroApp = useNitroApp();
 
 const server = new Server(toNodeListener(nitroApp.h3App));
-
-const socket_server = createSocketServer();
-instrument(socket_server, {
-  auth: false,
-});
+// createSocketServer();
 
 function getAddress() {
   if (provider === "stackblitz" || process.env.NITRO_NO_UNIX_SOCKET) {
