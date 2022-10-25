@@ -6,7 +6,7 @@ import destr from "destr";
 import { toNodeListener } from "h3";
 
 // @ts-ignore
-import { useNitroApp } from "#internal/nitro";
+import { useRuntimeConfig, useNitroApp } from "#internal/nitro";
 import { createSocketServer } from "#entry_socket";
 
 const nitroApp = useNitroApp();
