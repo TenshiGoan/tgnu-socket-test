@@ -49,10 +49,10 @@ export default defineNuxtModule<ModuleOptions>({
       proxy_target.port = address.port;
     });
 
-    changeEntry(
+    /* changeEntry(
       resolver.resolve("runtime", "entry-node-server"),
       resolver.resolve("runtime", "entry-nitro-dev")
-    );
+    ); */
 
     addPlugin(
       resolver.resolve("runtime", "plugin.client") //
